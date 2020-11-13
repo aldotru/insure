@@ -81,9 +81,9 @@ a {
 }
 
 .divider {
-    display: inline-block;
+    display: block;
     margin-bottom: 3rem;
-    width: 7.5rem;
+    max-width: 7.5rem;
     height: 0.125rem;
 }
 
@@ -160,7 +160,7 @@ a {
 }
 
 .hero__info {
-    max-width: 550px;
+    max-width: 34.375rem;
     margin-bottom: 1.5rem;
 }
 
@@ -245,6 +245,7 @@ a {
     display: flex;
         align-items: center;
         justify-content: space-between;
+    overflow: hidden;
     padding: 5rem;
     position: relative;
     transition: all 0.3s ease-in-out;
@@ -398,6 +399,149 @@ a {
     
     .container {
         padding: 0 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 61.875em) {
+
+    .hero {
+        padding-bottom: 5rem;
+        background-image: linear-gradient(
+            to bottom,
+            var(--violet-dark-2) 80%,
+            var(--white-1) 20% );
+    }
+
+    .hero__info-box {
+        margin-right: 1.5rem;
+    }
+    
+    .hero__header,
+    .different__header,
+    .banner__header {
+        font-size: 2.5rem;
+    }
+
+    .hero__img {
+        max-width: 20rem;
+    }
+
+    .different {
+        padding: 0 0 3rem 0;
+    }
+    
+    .different__benefit-header {
+        font-size: 1.25rem;
+    }
+
+    .banner__row {
+        padding: 5rem 2rem;
+    }
+
+    .banner__header {
+            max-width: 8.75em;
+    }
+
+}
+
+@media only screen and (max-width: 48em) {
+
+    html {
+        font-size: 15px;
+    }
+
+    .header__nav {
+        display: none;
+    }   
+    
+    .divider {
+        margin: 0 auto 1.5rem;
+    }
+
+    .different__header,
+    .banner__header {
+        text-align: center;
+    }
+
+    .hero {
+        background-image: linear-gradient(
+            to bottom,
+            var(--violet-dark-2) 100%,
+            var(--white-1) 0 );
+        padding-bottom: 5rem;
+    }
+
+    .hero__row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero__info-box {
+        margin-right: 0;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .hero__header {
+        margin: 0 auto 1.5rem;
+    }
+
+    .different {
+        padding-top: 3rem;
+    }
+
+    .different__benefits {
+        flex-direction: column;
+        align-items: center;
+    }    
+
+    .different__benefit {
+        max-width: 28.125rem;
+        text-align: center;
+    }
+
+    .different__benefit:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+
+    .banner__row {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+    }
+    
+    .banner__row:hover {
+        transform: initial;
+    }
+
+    .banner__header {
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .footer__row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__logo {
+        margin-bottom: 2rem;
+    }
+
+    .footer__social-item:not(:last-child) {
+        margin-right: 1.5rem;
+    }
+
+    .footer__box:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .footer__box {
+        text-align: center;
     }
 
 }
