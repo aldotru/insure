@@ -329,6 +329,22 @@ a {
     margin-bottom: 1.5rem;
 }
 
+.footer__list {
+    transition: all 0.3s ease-in-out;
+}
+
+.footer__list:hover .footer__item {
+    opacity: 0.35;
+}
+
+.footer__item {
+    transition: all 0.3s ease-in-out;
+}
+
+.footer__list:hover .footer__item:hover {
+    opacity: 1;
+}
+
 .footer__item:not(:last-child) {
     margin-bottom: 1rem;
 }
