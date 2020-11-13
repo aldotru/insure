@@ -53,6 +53,31 @@ a {
     margin: 0 auto;
 }
 
+.link {
+    padding-bottom: 0.25rem;
+    position: relative;
+}
+
+.link:focus {
+    outline: none;
+}
+
+.link::after {
+    content: '';
+    background-color: var(--violet-dark-2);
+    position: absolute;
+        left: 0;
+        bottom: 0;
+    width: 0;
+    height: 0.125rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.link:hover::after,
+.link:focus::after {
+    width: 100%;
+}
+
 .btn {
     background-color: transparent;
     font-weight: 700;
@@ -65,9 +90,11 @@ a {
     border: solid 2px var(--violet-dark-2);
 }
 
-.btn--purple:hover {
+.btn--purple:hover,
+.btn--purple:focus {
     background-color: var(--violet-dark-2);
     color: var(--white-1);
+    outline: none;
 }
 
 .btn--white {
@@ -75,9 +102,11 @@ a {
     color: var(--white-1);
 }
 
-.btn--white:hover {
+.btn--white:hover,
+.btn--white:focus {
     background-color: var(--white-1);
     color: var(--violet-dark-2);
+    outline: none;
 }
 
 .divider {
@@ -210,6 +239,10 @@ a {
         justify-content: space-between;
 }
 
+.different__benefit:focus {
+    outline: none;
+}
+
 .different__benefit:not(:last-child) {
     margin-right: 1.5rem;
 }
@@ -222,7 +255,8 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
-.different__benefit:hover .different__icon circle{
+.different__benefit:hover .different__icon circle,
+.different__benefit:focus .different__icon circle {
     fill: var(--violet-dark-2);
 }
 
@@ -312,11 +346,16 @@ a {
     margin-right: 1rem;
 }
 
+.footer__social-link:focus {
+    outline: none;
+}
+
 .footer__social-icon path {
     transition: all 0.3s ease-in-out;
 }
 
-.footer__social-icon:hover path {
+.footer__social-icon:hover path,
+.footer__social-link:focus .footer__social-icon path {
     fill: var(--violet-dark-2);
 }
 
@@ -335,7 +374,7 @@ a {
 }
 
 .footer__list:hover .footer__item {
-    opacity: 0.35;
+    opacity: 0.5;
 }
 
 .footer__item {
@@ -542,6 +581,26 @@ a {
 
     .footer__box {
         text-align: center;
+    }
+
+}
+
+@media ( hover : none ) {
+
+    .btn--purple {
+        background-color: var(--violet-dark-2);
+        color: var(--white-1);
+        outline: none;
+    }
+
+    .btn--white {
+        background-color: var(--white-1);
+        color: var(--violet-dark-2);
+        outline: none;
+    }
+
+    .footer__list:hover .footer__item {
+        opacity: 1;
     }
 
 }
