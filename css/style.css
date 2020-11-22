@@ -124,9 +124,22 @@ a {
     background-color: var(--violet-light-1);
 }
 
+.open {
+    top: 100% !important;
+}
+
 /* / reusable */
 
-/* navigation */
+/*  desktop navigation */
+
+/* mobile navigation */
+
+.hambuguer__icon,
+.mobile__nav {
+    display: none;
+}
+
+/* mobile navigation */
 
 .header {
     background-color: var(--white-1);
@@ -157,7 +170,27 @@ a {
     color: var(--violet-dark-2);
 }
 
-/* / navigation */
+/* /  desktop navigation */
+
+/* mobile navigation */
+
+.hambuguer__icon {
+        padding: 0;
+        border: none;
+    }
+
+    .mobile__nav {
+    position: absolute;
+        left: 0;
+        top: calc(-100% - 77px);
+    background-color: var(--white-1);
+    padding: 1.5rem;
+    width: 100%;
+    z-index: -2;
+    transition: all 0.3s ease-in-out;
+}
+
+/* mobile navigation */
 
 /* hero */
 
@@ -490,14 +523,40 @@ a {
         font-size: 15px;
     }
 
-    .header__nav {
-        display: none;
-    }   
-    
     .divider {
         margin: 0 auto 1.5rem;
     }
 
+    .header__nav {
+        display: none;
+    }
+
+    .hambuguer__icon {
+        display: initial;
+        padding: 0;
+        border: none;
+    }
+
+    .mobile__nav {
+        display: initial;
+        position: absolute;
+            left: 0;
+            top: calc(-100% - 77px);
+        background-color: var(--white-1);
+        padding: 1.5rem;
+        width: 100%;
+        z-index: -2;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .mobile__item {
+        text-align: center;
+    }
+
+    .mobile__item:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+    
     .different__header,
     .banner__header {
         text-align: center;
@@ -515,16 +574,33 @@ a {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
 
     .hero__info-box {
         margin-right: 0;
-        margin-bottom: 3rem;
         text-align: center;
+        z-index: 1;
+    }
+
+    .hero__img {
+        display: none;
     }
 
     .hero__header {
         margin: 0 auto 1.5rem;
+    }
+
+    .hero__details--left {
+        bottom: -120px; 
+        left: 0;
+        max-width: 5.6rem;
+    }
+
+    .hero__details--right {
+        top: -115px;
+        right: -40px;
+        max-width: 15rem;
     }
 
     .different {
