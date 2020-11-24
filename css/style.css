@@ -125,7 +125,7 @@ a {
 }
 
 .open {
-    top: 100% !important;
+    top: 77px !important;
 }
 
 /* / reusable */
@@ -134,7 +134,7 @@ a {
 
 /* mobile navigation */
 
-.hambuguer__icon,
+.hamburguer__icon,
 .mobile__nav {
     display: none;
 }
@@ -145,7 +145,7 @@ a {
     background-color: var(--white-1);
     padding: 1.5rem 0;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .header__row {
@@ -174,20 +174,21 @@ a {
 
 /* mobile navigation */
 
-.hambuguer__icon {
-        padding: 0;
-        border: none;
-    }
+.hamburguer__icon {
+    padding: 0;
+    border: none;
+}
 
-    .mobile__nav {
+.mobile__nav {
+    display: block;
     position: absolute;
         left: 0;
-        top: calc(-100% - 77px);
+        top: calc(-100% + 104px);
     background-color: var(--white-1);
     padding: 1.5rem;
     width: 100%;
-    z-index: -2;
-    transition: all 0.3s ease-in-out;
+    z-index: 2;
+    transition: all 0.6s ease-in-out;
 }
 
 /* mobile navigation */
@@ -212,6 +213,8 @@ a {
 .hero__info-box {
     color: var(--white-1);
     margin-right: 5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .hero__header {
@@ -308,18 +311,12 @@ a {
 
 .banner__row {
     background-color: var(--violet-dark-2);
-    backface-visibility: hidden;
     display: flex;
         align-items: center;
         justify-content: space-between;
     overflow: hidden;
     padding: 5rem;
     position: relative;
-    transition: all 0.3s ease-in-out;
-}
-
-.banner__row:hover {
-    transform: scale(1.1);
 }
 
 .banner__header {
@@ -531,22 +528,10 @@ a {
         display: none;
     }
 
-    .hambuguer__icon {
+    .hamburguer__icon {
         display: initial;
         padding: 0;
         border: none;
-    }
-
-    .mobile__nav {
-        display: initial;
-        position: absolute;
-            left: 0;
-            top: calc(-100% - 77px);
-        background-color: var(--white-1);
-        padding: 1.5rem;
-        width: 100%;
-        z-index: -2;
-        transition: all 0.3s ease-in-out;
     }
 
     .mobile__item {
@@ -598,9 +583,9 @@ a {
     }
 
     .hero__details--right {
-        top: -115px;
-        right: -40px;
-        max-width: 15rem;
+        top: 0;
+        right: 0;
+        max-width: 8rem;
     }
 
     .different {
@@ -625,10 +610,6 @@ a {
     .banner__row {
         flex-direction: column;
         padding: 3rem 1.5rem;
-    }
-    
-    .banner__row:hover {
-        transform: initial;
     }
 
     .banner__header {
